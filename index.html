@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" >
+    
+    
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/icons/favicon-65.png" />
     <link rel="apple-touch-icon" href="images/icons/favicon-180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;0,800;1,400&family=Bebas+Neue&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;0,800;1,400&family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="AR Font/STC-Font/stc.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="manifest" href="manifest.webmanifest" />
+    
     <title>London College</title>
   </head>
   <body>
@@ -30,7 +33,7 @@
         <span class="header_logo-text">United kingdom</span>
       </figure>
       <p class="header_heading">city london college</p>
-      <div class="search_container">
+      <form class="search_container">
         <input
           type="search"
           class="search_input"
@@ -38,24 +41,26 @@
           onfocus="this.placeholder=''"
           onblur="this.placeholder='certificate no.'"
         />
-        <svg class="search_icon">
-          <use xlink:href="images/icons/sprite.svg#icon-search"></use>
-        </svg>
-      </div>
+        <button class="search-btn">
+          <svg class="search_icon">
+            <use xlink:href="images/icons/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
     </header>
 
     <div class="search_page-mobile none" dir="ltr">
       <p class="close">Close</p>
-      <div class="search_container-mobile">
+      <form class="search_container-mobile">
         <input
           type="search"
           class="search_input-mobile"
           placeholder="certificate no."
         />
-        <svg class="search_icon-mobile">
-          <use xlink:href="images/icons/sprite.svg#icon-search"></use>
-        </svg>
-      </div>
+          <svg class="search_icon-mobile">
+            <use xlink:href="images/icons/sprite.svg#icon-search"></use>
+          </svg>
+      </form>
     </div>
 
     <div class="main_page">
@@ -71,6 +76,97 @@
             المعلمين من إنشاء وتقديم محتوى تعليمي جذاب.
           </p>
         </div>
+      </section>
+
+      <section id="galleryCarousel" data-bs-ride="false" data-bs-touch="true" class="gallery carousel" dir="ltr">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="gallery__inner carousel-inner">
+
+          <div class="gallery__box carousel-item active">
+            <img
+                src="images/gallery/img-1.jpg"
+                alt=""
+                class="gallery__img gallery__img-1"
+              />
+              <img
+                src="images/gallery/img-2.jpg"
+                alt=""
+                class="gallery__img gallery__img-2"
+              />
+              <img
+                src="images/gallery/img-3.jpg"
+                alt=""
+                class="gallery__img gallery__img-3"
+              />
+              <img
+                src="images/gallery/img-4.jpg"
+                alt=""
+                class="gallery__img gallery__img-4"
+              />
+              <img
+                src="images/gallery/img-5.jpg"
+                alt=""
+                class="gallery__img gallery__img-5"
+              />
+              <img
+                src="images/gallery/img-1.jpg"
+                alt=""
+                class="gallery__img gallery__img-6"
+              />
+              <img
+                src="images/gallery/img-2.jpg"
+                alt=""
+                class="gallery__img gallery__img-7"
+              />
+              <img
+                src="images/gallery/img-3.jpg"
+                alt=""
+                class="gallery__img gallery__img-8"
+              />
+          </div>
+          
+          <div class="gallery__box carousel-item">
+            <img
+                src="images/gallery/img-1.jpg"
+                alt=""
+                class="gallery__img gallery__img-1"
+              />
+              <img
+                src="images/gallery/img-2.jpg"
+                alt=""
+                class="gallery__img gallery__img-2"
+              />
+              <img
+                src="images/gallery/img-3.jpg"
+                alt=""
+                class="gallery__img gallery__img-3"
+              />
+              <img
+                src="images/gallery/img-4.jpg"
+                alt=""
+                class="gallery__img gallery__img-4"
+              />
+              <img
+                src="images/gallery/img-5.jpg"
+                alt=""
+                class="gallery__img gallery__img-5"
+              />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <svg class="carousel-control-prev-icon" aria-hidden="true">
+            <use xlink:href="images/icons/sprite-chevron.svg#icon-chevron-thin-left"></use>
+          </svg>
+          
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <svg class="carousel-control-next-icon" aria-hidden="true">
+            <use xlink:href="images/icons/sprite-chevron.svg#icon-chevron-thin-right"></use>
+          </svg>
       </section>
 
       <section class="section_courses">
@@ -303,5 +399,6 @@
     </footer>
 
     <script defer src="script.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
   </body>
 </html>
